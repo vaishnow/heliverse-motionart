@@ -1,5 +1,7 @@
+import MotionArtPage from "./components/MotionArtPage";
+
 function App() {
-  return <div>App</div>;
+  return <MotionArtPage />;
 }
 
-export default App
+export default App;
