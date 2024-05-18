@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('./assets/fonts/Outfit-Thin.woff2') format('woff2'),
+		url('./assets/fonts/Outfit-Thin.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sora';
+	src: url('./assets/fonts/Sora-Regular.woff2') format('woff2'),
+		url('./assets/fonts/Sora-Regular.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
