@@ -24,21 +24,23 @@ const Features = () => {
 
   return (
     <>
-      <div>
+      <div className="w-[55%] text-center mx-auto">
         <h2>An All-Round Plugin With Powerful Features</h2>
-        <p>
+        <p className="mx-5 my-10">
           Whether you're a seasoned web designer or just starting out, Motion
           Art for Elementor seamlessly integrates with the Elementor platform,
           providing you with a seamless and intuitive experience.
         </p>
       </div>
-      {features.map(({ desc, img, title }) => (
-        <FeatCard>
-          <FeatImg src={img} alt={title} />
-          <FeatTitle>{title}</FeatTitle>
-          <FeatDesc>{desc}</FeatDesc>
-        </FeatCard>
-      ))}
+      <div className="columns-3 gap-5">
+        {features.map(({ desc, img, title }) => (
+          <FeatCard key={title}>
+            <FeatImg src={img} alt={title} />
+            <FeatTitle>{title}</FeatTitle>
+            <FeatDesc>{desc}</FeatDesc>
+          </FeatCard>
+        ))}
+      </div>
     </>
   );
 };

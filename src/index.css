@@ -19,3 +19,17 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@layer base {
+	h2 {
+		@apply text-[35px] font-semibold
+	}
+
+	h3 {
+		@apply text-2xl font-semibold
+	}
+
+	p {
+		@apply text-lg text-[#EEE5FFBD]
+	}
+}

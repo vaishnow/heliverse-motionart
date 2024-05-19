@@ -1,0 +1,10 @@
+.bg-ma-grad {
+	@apply bg-gradient-to-r from-gl to-gr
+	/* from-[16%] to-[43%] */
+}
+
+.text-ma-grad {
+	-webkit-text-fill-color: transparent;
+	@apply bg-gradient-to-r from-gl to-gr bg-clip-text
+	/* from-[16%]  to-[43%] */
+}

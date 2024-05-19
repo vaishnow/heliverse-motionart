@@ -8,10 +8,10 @@ type Props = {
 
 const Rating = ({ src, score = 4.5, reviews = 9 }: Props) => {
   return (
-    <div>
+    <div className="flex">
       <img src={src} alt="" />
-      <div>
-        <img src={fiveStar} alt="five stars" />
+      <div className="flex flex-col justify-end pt-2 ps-2">
+        <img src={fiveStar} alt="five stars" className="my-auto" />
         <p>
           <span>{score}</span> Score,
           <span>{reviews}</span> Reviews

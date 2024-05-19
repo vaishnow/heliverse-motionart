@@ -5,11 +5,16 @@ import Rating from "../common/Rating";
 
 const RatingsContainer = () => {
   return (
-    <div>
-      <Rating src={envatoLogo}/>
-      <Rating src={g2Logo}/>
-      <Rating src={wordpressLogo}/>
-    </div>
+    <section>
+      <h3 className="text-2xl text-center font-semibold">
+        Trusted by thousands of users around the world
+      </h3>
+      <div className="flex justify-around py-14">
+        <Rating src={envatoLogo} />
+        <Rating src={g2Logo} />
+        <Rating src={wordpressLogo} />
+      </div>
+    </section>
   );
 };
 export default RatingsContainer;

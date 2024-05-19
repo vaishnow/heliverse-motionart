@@ -8,17 +8,17 @@ import RatingsContainer from "./RatingsContainer";
 
 const index = () => {
   return (
-    <>
-      <Navbar />
-      <main>
+    <div className="max-w-screen-xl mx-auto">
+      <Navbar/>
+      <main className="text-light font-outfit">
         <Hero />
         <RatingsContainer />
         <Applications />
         <BrowserSupport />
         <Features />
       </main>
-      <Footer />
-    </>
+      <Footer/>
+    </div>
   );
 };
 export default index;
