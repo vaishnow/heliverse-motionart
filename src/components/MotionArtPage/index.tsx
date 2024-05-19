@@ -5,10 +5,12 @@ import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import RatingsContainer from "./RatingsContainer";
+import WebGLCanvas from "../WebGLCanvas";
 
 const index = () => {
   return (
     <div className="max-w-screen-xl mx-auto">
+      <WebGLCanvas/>
       <Navbar/>
       <main className="text-light font-outfit">
         <Hero />
