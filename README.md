@@ -1,3 +1,16 @@
+# Frontend Assignment - Heliverse 
+
+### [Live Demo](https://heliverse-motionart.vercel.app/) 
+
+# References
+
+- [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation) 
+  by
+  [PavelDoGreat](https://github.com/PavelDoGreat/)
+   
+  [WebGL-Fluid-Simulation Live Demonstration](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
