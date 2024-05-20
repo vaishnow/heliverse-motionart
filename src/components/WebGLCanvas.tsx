@@ -12,22 +12,21 @@ const WebGLCanvas = () => {
   let splatStack: number[] = [];
   pointers.push(new (pointerPrototype as any)());
 
-  // TODO: Update Config
   let config = {
     SIM_RESOLUTION: 128,
-    DYE_RESOLUTION: 1024,
+    DYE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 1,
-    VELOCITY_DISSIPATION: 0.2,
+    VELOCITY_DISSIPATION: 1,
     PRESSURE: 0.8,
     PRESSURE_ITERATIONS: 20,
     CURL: 30,
-    SPLAT_RADIUS: 0.25,
+    SPLAT_RADIUS: 0.5,
     SPLAT_FORCE: 6000,
-    SHADING: true,
+    SHADING: false,
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r: 0, g: 0, b: 0 },
+    BACK_COLOR: { r: 2, g: 3, b: 15 },
     TRANSPARENT: false,
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
@@ -354,11 +353,6 @@ if (!ext.supportLinearFiltering) {
   config.SUNRAYS = false;
 }
 
-
-
-
-
-
 const blit = (() => {
   gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, -1, 1, 1, 1, 1, -1]), gl.STATIC_DRAW);
@@ -428,7 +422,6 @@ const gradienSubtractProgram = new Program(baseVertexShader, gradientSubtractSha
 
 const displayMaterial = new Material(baseVertexShader, displayShaderSource);
 
-// TODO: Update eventListener functions
     canvas.addEventListener("mouseenter", (e) => {
       let posX = scaleByPixelRatio(e.offsetX);
       let posY = scaleByPixelRatio(e.offsetY);
