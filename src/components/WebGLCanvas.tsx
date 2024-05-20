@@ -422,7 +422,8 @@ const gradienSubtractProgram = new Program(baseVertexShader, gradientSubtractSha
 
 const displayMaterial = new Material(baseVertexShader, displayShaderSource);
 
-    canvas.addEventListener("mouseenter", (e) => {
+    window.addEventListener("mouseover", (e) => {
+    console.log("DBG: mouseenter : " ) //DEBUG/Exposure
       let posX = scaleByPixelRatio(e.offsetX);
       let posY = scaleByPixelRatio(e.offsetY);
       let pointer = pointers.find((p) => p.id == -1);
@@ -430,7 +431,8 @@ const displayMaterial = new Material(baseVertexShader, displayShaderSource);
       updatePointerDownData(pointer, -1, posX, posY);
     });
 
-    canvas.addEventListener("mousemove", (e) => {
+    window.addEventListener("mousemove", (e) => {
+    console.log("DBG: mousemove : " ) //DEBUG/Exposure
       let pointer = pointers[0];
       if (!pointer.down) return;
       let posX = scaleByPixelRatio(e.offsetX);
@@ -438,7 +440,9 @@ const displayMaterial = new Material(baseVertexShader, displayShaderSource);
       updatePointerMoveData(pointer, posX, posY);
     });
 
-    window.addEventListener("mouseleave", () => {
+
+    window.addEventListener("mouseout", () => {
+    console.log("DBG: mouseleave : " ) //DEBUG/Exposure
       updatePointerUpData(pointers[0]);
     });
 
@@ -1035,7 +1039,7 @@ function hashCode (s: string) {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-10">
+    <div className="fixed inset-0 -z-10">
       <canvas ref={webglCanvas} className="size-full"></canvas>
     </div>
   );

@@ -9,10 +9,10 @@ import WebGLCanvas from "../WebGLCanvas";
 
 const index = () => {
   return (
-    <div className="max-w-screen-xl mx-auto">
+    <div className="max-w-screen-xl mx-auto max-h-screen overflow-y-scroll scrollbar-none">
       <WebGLCanvas/>
       <Navbar/>
-      <main className="text-light font-outfit">
+      <main className="text-light font-outfit pointer-events-none">
         <Hero />
         <RatingsContainer />
         <Applications />

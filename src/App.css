@@ -8,3 +8,8 @@
 	@apply bg-gradient-to-r from-gl to-gr bg-clip-text
 	/* from-[16%]  to-[43%] */
 }
+
+.scrollbar-none::-webkit-scrollbar{
+	display: none;
+	
+}
