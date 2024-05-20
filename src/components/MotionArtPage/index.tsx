@@ -9,16 +9,18 @@ import WebGLCanvas from "../WebGLCanvas";
 
 const index = () => {
   return (
-    <div className="max-w-screen-xl mx-auto max-h-screen overflow-y-scroll scrollbar-none">
-      <WebGLCanvas/>
-      <Navbar/>
-      <main className="text-light font-outfit pointer-events-none">
-        <Hero />
-        <RatingsContainer />
-        <Applications />
-        <BrowserSupport />
-        <Features />
-      </main>
+    <div className="max-h-screen overflow-y-scroll scrollbar-none">
+      <div className="max-w-screen-xl mx-auto">
+        <WebGLCanvas/>
+        <Navbar/>
+        <main className="text-light font-outfit pointer-events-none">
+          <Hero />
+          <RatingsContainer />
+          <Applications />
+          <BrowserSupport />
+          <Features />
+        </main>
+      </div>
       <Footer/>
     </div>
   );
