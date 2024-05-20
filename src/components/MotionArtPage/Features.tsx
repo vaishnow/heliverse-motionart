@@ -32,7 +32,7 @@ const Features = () => {
           providing you with a seamless and intuitive experience.
         </p>
       </div>
-      <div className="columns-3 gap-5">
+      <div className="flex flex-wrap justify-center gap-5 p-5">
         {features.map(({ desc, img, title }) => (
           <FeatCard key={title}>
             <FeatImg src={img} alt={title} />
